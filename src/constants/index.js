@@ -15,7 +15,7 @@ export const experiences = [
     company: "Freelance",
     date: "2017 - Presente",
     descriptionKey: "freelanceDescription",
-    website: "https://www.tdnic.com.ar/",
+    website: "https://www.dariotamburello.dev/",
   },
   {
     titleKey: "itConsultantDeveloper",
@@ -46,7 +46,7 @@ export const projects = [
     descriptionKey: "project_classic_models_description",
     tech: ["Node.js", "MySQL", "MongoDB", "Javascript"],
     image: classicModels,
-    url: "https://classicmodels-api-rest.vercel.app",
+    url: "https://classicmodels.dariotamburello.dev",
     repo: "https://github.com/dariotamburello/classicmodels_api_rest",
   },
   {
@@ -54,7 +54,7 @@ export const projects = [
     descriptionKey: "project_game_find_number_description",
     tech: ["React", "Tailwind", "Javascript", "i18n"],
     image: findNumber,
-    url: "https://game-find-number.vercel.app/",
+    url: "https://game-find-number.dariotamburello.dev/",
     repo: "https://github.com/dariotamburello/game_find_number",
   },
   {
@@ -62,7 +62,7 @@ export const projects = [
     descriptionKey: "project_resume_web_description",
     tech: ["Astro", "Tailwind", "Javascript", "i18n"],
     image: resumeFromJson,
-    url: "https://resume-portfolio-psi-lemon.vercel.app/en/",
+    url: "https://cv.dariotamburello.dev",
     repo: "https://github.com/dariotamburello/resume_portfolio",
   },
   {
@@ -70,7 +70,7 @@ export const projects = [
     descriptionKey: "project_todo_app_description",
     tech: ["React", "Tailwind", "Javascript"],
     image: todoApp,
-    url: "https://to-do-app-eight-psi-96.vercel.app/",
+    url: "https://to-do-app.dariotamburello.dev/",
     repo: "https://github.com/dariotamburello/To.Do-App",
   },
   {
@@ -78,7 +78,7 @@ export const projects = [
     descriptionKey: "project_asana_clone_description",
     tech: ["Astro", "Tailwind"],
     image: asana,
-    url: "https://asana-clone-wine.vercel.app/",
+    url: "https://asana-clone.dariotamburello.dev/",
     repo: "https://github.com/dariotamburello/asana_clone",
   },
 ];

@@ -67,10 +67,10 @@ const Header = () => {
               <FaLinkedin /> LinkedIn
             </LightButtonLink>
             <LightButtonLink
-              url="https://www.linkedin.com/in/dariotamburello89/"
+              url="https://cv.dariotamburello.dev"
               className="px-6 py-3 justify-center"
             >
-              <PiReadCvLogoFill /> My resume
+              <PiReadCvLogoFill /> {t("myResume")}
             </LightButtonLink>
           </motion.p>
         </div>

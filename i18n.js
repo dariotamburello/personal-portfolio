@@ -15,7 +15,7 @@ const resources = {
       // Header
       hello:
         "Hello! My name is Darío. I'm a full-stack developer currently working with React, Node.js, Astro, and modern databases. Visit my profiles to see all my projects and skills:",
-
+      myResume: "My Resume",
       // Projects
       projectsTitle: "Projects",
       access: "Access",
@@ -93,7 +93,7 @@ const resources = {
       // Header
       hello:
         "¡Hola! Mi nombre es Darío. Soy un desarrollador full-stack trabajando actualmente con React, Node.js, Astro y bases de datos modernas. Visita mis perfiles para ver todos mis proyectos y habilidades:",
-
+      myResume: "Mi curriculum",
       // Projects
       projectsTitle: "Proyectos",
       access: "Acceder",
@@ -173,7 +173,6 @@ i18n
     },
   })
   .then(() => {
-    // Llama a applyTranslations una vez que i18n está listo
     applyTranslations();
   });
 
