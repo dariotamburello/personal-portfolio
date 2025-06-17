@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-import "./i18n.js";
+import "../i18n.js";
 import Header from "./sections/Header";
 import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
