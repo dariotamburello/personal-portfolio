@@ -1,6 +1,7 @@
-// src/sections/Contact.jsx
-import { useState } from "react";
+/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
+/* eslint-enable no-unused-vars */
+import { useState } from "react";
 import emailjs from "emailjs-com";
 import Title from "../components/Title";
 import { FaPaperPlane, FaEnvelope, FaUser, FaComments } from "react-icons/fa";
@@ -35,14 +36,14 @@ const Contact = () => {
 
       setSendStatus({
         success: true,
-        message: t("messageSentSuccess"), // Usar la clave de traducción
+        message: t("messageSentSuccess"),
       });
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       console.error("Error sending email:", error);
       setSendStatus({
         success: false,
-        message: t("messageSentError"), // Usar la clave de traducción
+        message: t("messageSentError"),
       });
     } finally {
       setIsSending(false);
@@ -60,6 +61,7 @@ const Contact = () => {
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           className="bg-white rounded-2xl shadow-lg p-8"
         >
@@ -139,7 +141,7 @@ const Contact = () => {
                 type="submit"
                 disabled={isSending}
                 alt={t("sendMessageButton")}
-                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 disabled:bg-blue-400"
+                className="w-full py-3 px-6 rounded-lg flex items-center justify-center gap-2 bg-blue-500 border-2 border-blue-500 text-white hover:bg-blue-400 hover:border-blue-400 transition-colors disabled:bg-blue-100"
               >
                 <FaPaperPlane />
                 {isSending ? t("sending") : t("sendMessageButton")}
@@ -161,8 +163,9 @@ const Contact = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-col justify-between"
         >

@@ -1,12 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import { skillsIcons } from "../constants/tech-icons";
+import { useTranslation } from "react-i18next";
+
+const TouchIndicatorIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-5 h-5 text-white opacity-70"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M19 9l-7 7-7-7"
+    />
+  </svg>
+);
 
 const FlipCard = ({ category }) => {
+  const [isFlipped, setIsFlipped] = useState(false);
   const CategoryIcon = skillsIcons[category.icon]?.icon;
   const categoryColor = skillsIcons[category.icon]?.color;
 
+  const { t } = useTranslation();
+
+  const handleClick = () => {
+    setIsFlipped(!isFlipped);
+  };
+
   return (
-    <div className="relative w-full h-full transition-transform duration-800 ease-[cubic-bezier(0.4,0,0.2,1)] transform-style-preserve-3d group-hover:rotate-y-180">
+    <div
+      className={`relative w-full h-full cursor-pointer transition-transform duration-800 ease-[cubic-bezier(0.4,0,0.2,1)] transform-style-preserve-3d ${
+        isFlipped ? "rotate-y-180" : ""
+      }`}
+      onClick={handleClick}
+      role="button"
+      tabIndex="0"
+      aria-pressed={isFlipped}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          handleClick();
+        }
+      }}
+    >
       <div className="absolute w-full h-full bg-gradient-to-br from-[#00A4EF] to-blue-500 rounded-xl shadow-lg flex flex-col items-center justify-center backface-hidden p-6">
         {CategoryIcon && (
           <div className="mb-4 text-4xl" style={{ color: categoryColor }}>
@@ -28,12 +66,18 @@ const FlipCard = ({ category }) => {
             )}
           </div>
         )}
+
         <h3 className="text-2xl font-bold text-white text-center">
           {category.category}
         </h3>
+
+        <div className="absolute bottom-4 right-4 flex items-center gap-1 opacity-60 ">
+          <span className="text-xs text-white">{t("seeMore")}</span>
+          <TouchIndicatorIcon />
+        </div>
       </div>
 
-      <div className="absolute w-full h-full bg-white rounded-xl shadow-lg transform rotate-y-180 backface-hidden p-6 overflow-hidden">
+      <div className="absolute w-full h-full bg-white rounded-xl shadow-lg rotate-y-180 backface-hidden p-6 overflow-hidden">
         <div className="flex flex-col h-full">
           <h3 className="text-xl font-semibold mb-4 text-gray-800 flex items-center gap-2">
             {CategoryIcon && !Array.isArray(CategoryIcon) && (

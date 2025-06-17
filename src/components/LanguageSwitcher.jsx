@@ -1,6 +1,8 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
+/* eslint-enable no-unused-vars */
 
 const languages = ["en", "es"];
 
@@ -18,7 +20,7 @@ const LanguageSwitcher = () => {
         <button
           key={lng}
           onClick={() => changeLanguage(lng)}
-          className={`relative z-10 px-4 py-1 text-sm font-medium rounded-full transition-colors cursor-pointer ${
+          className={`relative z-10 px-2 md:px-4 py-1 text-xs md:text-sm font-medium rounded-full transition-all cursor-pointer ${
             currentLang === lng ? "text-white" : "text-gray-700"
           }`}
         >

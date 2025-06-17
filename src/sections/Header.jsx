@@ -1,4 +1,6 @@
-import { motion } from "motion/react";
+/* eslint-disable no-unused-vars */
+import { motion } from "framer-motion";
+/* eslint-enable no-unused-vars */
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { PiReadCvLogoFill } from "react-icons/pi";
 import ParticlesBackground from "../components/ParticlesBackground";
@@ -16,7 +18,7 @@ const Header = () => {
         <ParticlesBackground />
       </div>
 
-      <nav className="fixed right-10 top-10 z-10">
+      <nav className="fixed top-20 right-2 md:right-10 md:top-10 z-10">
         <LanguageSwitcher />
       </nav>
 
@@ -43,16 +45,16 @@ const Header = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-2xl lg:text-3xl mb-8"
+            className="text-xl text-balance md:text-2xl lg:text-3xl mb-8"
           >
             {t("hello")}
           </motion.p>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex gap-4 justify-center text-xl mb-8"
+            className="flex flex-col md:flex-row gap-4 justify-center text-xl mb-8  md:items-center"
           >
             <DarkButtonLink
               url="https://github.com/dariotamburello"
@@ -72,7 +74,7 @@ const Header = () => {
             >
               <PiReadCvLogoFill /> {t("myResume")}
             </LightButtonLink>
-          </motion.p>
+          </motion.div>
         </div>
       </div>
     </header>

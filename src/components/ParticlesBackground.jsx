@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
+import { loadSlim } from "@tsparticles/slim";
 
 const ParticlesBackground = () => {
   const [init, setInit] = useState(false);
@@ -18,34 +18,34 @@ const ParticlesBackground = () => {
       autoPlay: true,
       background: {
         color: {
-          value: "#0d1117", // Fondo oscuro similar al sitio proporcionado
+          value: "#0d1117",
         },
       },
       particles: {
         number: {
-          value: 140, // Aumentar ligeramente la cantidad de partículas
+          value: 140,
           density: {
             enable: true,
-            area: 2000, // Densidad ajustada
+            area: 2000, // density
           },
         },
         color: {
-          value: "#ffffff", // Color blanco para las partículas
+          value: "#ffffff", // particles color
         },
         shape: {
-          type: "circle", // Forma circular
+          type: "circle",
         },
         opacity: {
-          value: 0.3, // Opacidad ajustada
+          value: 0.3,
           random: true,
         },
         size: {
-          value: 2, // Tamaño ajustado
+          value: 2,
           random: true,
         },
         move: {
           enable: true,
-          speed: 1.5, // Aumentar ligeramente la velocidad
+          speed: 1.5,
           direction: "none",
           outModes: {
             default: "out",
@@ -53,9 +53,9 @@ const ParticlesBackground = () => {
         },
         links: {
           enable: true,
-          distance: 150, // Distancia entre partículas conectadas
+          distance: 150,
           color: "#ffffff",
-          opacity: 0.2, // Hacer las líneas más tenues
+          opacity: 0.2, // lines opacity
           width: 1,
         },
       },
@@ -63,22 +63,22 @@ const ParticlesBackground = () => {
         events: {
           onHover: {
             enable: true,
-            mode: "grab", // Cambiar el efecto a "grab"
+            mode: "grab",
           },
           onClick: {
             enable: true,
-            mode: "push", // Agregar partículas al hacer clic
+            mode: "push",
           },
         },
         modes: {
           grab: {
-            distance: 140, // Distancia del efecto grab
+            distance: 140,
             links: {
-              opacity: 1, // Aumentar la opacidad de las líneas al hacer grab para que brillen más
+              opacity: 1,
             },
           },
           push: {
-            quantity: 4, // Cantidad de partículas añadidas al hacer clic
+            quantity: 4, // qty particles add on click
           },
         },
       },

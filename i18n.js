@@ -50,6 +50,7 @@ const resources = {
 
       // Skills
       skillsTitle: "Skills",
+      seeMore: "See more",
       languagesTools: "Languages & Frameworks",
       cloudDevOps: "Cloud & DevOps",
       databases: "Databases",
@@ -128,6 +129,7 @@ const resources = {
 
       // Skills
       skillsTitle: "Habilidades",
+      seeMore: "Ver más",
       languagesTools: "Lenguajes & Frameworks",
       cloudDevOps: "Nube & DevOps",
       databases: "Bases de Datos",

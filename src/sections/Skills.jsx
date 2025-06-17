@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
-import { skills } from "../constants";
+/* eslint-enable no-unused-vars */ import { skills } from "../constants";
 import "./Skills.css";
 import FlipCard from "../components/FlipCard";
 import Title from "../components/Title";
@@ -15,7 +16,7 @@ const Skills = () => {
     <div className="container mx-auto px-4">
       <Title>{t("skillsTitle")}</Title>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 xl:grid-cols-4 gap-6">
         {translatedProjects.map((category, index) => (
           <motion.div
             key={index}
