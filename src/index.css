@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'); */
+
+@layer base {
+  :root {
+    --color-primary: 23 23 23; /* Neutral-900 */
+    --color-secondary: 245 245 245; /* Neutral-100 */
+
+    /* Light theme */
+    --color-bg: 255 255 255;
+    --color-text: 23 23 23;
+  }
+
+  .dark {
+    /* Dark theme */
+    --color-primary: 245 245 245;
+    --color-secondary: 38 38 38;
+
+    --color-bg: 23 23 23;
+    --color-text: 245 245 245;
+  }
+
+  @font-face {
+    font-family: "Pontano Sans";
+    src: local("Pontano Sans"),
+      url("./assets/fonts/PontanoSans-VariableFont_wght.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body {
+    @apply bg-[rgb(var(--color-bg))] text-[rgb(var(--color-text))] transition-colors;
+    font-family: "Pontano Sans", sans-serif;
+  }
+}
